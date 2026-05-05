@@ -1,13 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-local state = {
-	terminal = {
-		buf = -1,
-		win = -1,
-	}
-}
-
 local remap = function(keys, action, desc, mode)
 	vim.keymap.set(mode, keys, action, { desc = desc })
 end
@@ -34,5 +27,9 @@ nremap('<C-l>', '<C-w><C-l>', 'Move focus to the right window')
 nremap('<C-j>', '<C-w><C-j>', 'Move focus to the lower window')
 nremap('<C-k>', '<C-w><C-k>', 'Move focus to the upper window')
 
-remap('<leader>tt', '<cmd>ToggleTerminal<CR>', '[T]oggle [T]erminal', {"n", "t"})
+-- Terminal Keybindings
+remap("<leader>tt", '<cmd>ToggleTerm<CR>', 'Terminal (last)', {'n', 't'})
+remap("<leader>tf", '<cmd>ToggleTerm direction=float<CR>', 'Terminal float', {'n', 't'})
+remap("<leader>tb", '<cmd>ToggleTerm direction=horizontal<CR>', 'Terminal horizontal', {'n', 't'})
+remap("<leader>tv", '<cmd>ToggleTerm direction=vertical<CR>', 'Terminal vertical', {'n', 't'})
 

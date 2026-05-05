@@ -58,5 +58,8 @@ return {
         ---@type ibl.config
         opts = {},
     },
+
+    -- Terminal Toggle
+    { 'akinsho/toggleterm.nvim', opts = { size = 20 } }
 }
 
