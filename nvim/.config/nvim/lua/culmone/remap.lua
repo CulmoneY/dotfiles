@@ -33,3 +33,4 @@ remap("<leader>tf", '<cmd>ToggleTerm direction=float<CR>', 'Terminal float', {'n
 remap("<leader>tb", '<cmd>ToggleTerm direction=horizontal<CR>', 'Terminal horizontal', {'n', 't'})
 remap("<leader>tv", '<cmd>ToggleTerm direction=vertical<CR>', 'Terminal vertical', {'n', 't'})
 
+nremap("<leader>e", '<cmd>Explore<CR>', '[E]xplore')
